@@ -42,6 +42,7 @@ export default function Card() {
                 {showAnswer && <p>{question.cardAnswer}</p>}
                 <button onClick={toggleAnswer}>{showAnswer ? 'Hide Answer' : 'Show Answer'}</button>
             </div>
+            {question.displayedCardIndexes.length == interviewQuestions.length && <p>You've reviewed all of the interview questions. Ready to try again?</p>}
             <button onClick={getNewQuestion}>{question.displayedCardIndexes.length == interviewQuestions.length ? 'Reset!' : 'Get New Question'}</button>
         </div>
     )
